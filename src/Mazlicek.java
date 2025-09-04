@@ -45,6 +45,6 @@ public class Mazlicek {
 
     @Override
     public String toString() {
-        return "Jméno:"+ jmeno + ", Druh: " + druh + ", Vek: " + vek + ", Vaha: " + vaha + "kg.";
+        return "Jméno: "+ jmeno + ", Druh: " + druh + ", Vek: " + vek + ", Vaha: " + vaha + "kg.";
     }
 }

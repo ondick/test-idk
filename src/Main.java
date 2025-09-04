@@ -6,7 +6,7 @@ public class Main {
             ArrayList<Mazlicek> list = new ArrayList<>();
             Scanner sc = new Scanner(System.in);
             boolean power = true;
-            while (power = true) {
+            while (power == true) {
                 System.out.println("1: Pridat mazlicka");
                 System.out.println("2: Vypsat mazlicky");
                 System.out.println("3: Ukončit program");
@@ -15,20 +15,24 @@ public class Main {
                     case 1:
                         System.out.println("Kolik chces pridat mazlicku?");
                         int cislo = sc.nextInt();
+                        sc.nextLine();
                         for (int i = 0; i < cislo; i++) {
                             System.out.println("Jak se jmenuje?");
                             String jmeno1 = sc.nextLine();
-                            System.out.println("Jakýje to druh?");
+                            System.out.println("Jaký je to druh?");
                             String druh1 = sc.nextLine();
                             System.out.println("Kolik mu je?");
                             int vek1 = sc.nextInt();
-                            System.out.println("Kolik váží?");
+                            System.out.println("Kolik váží?(kg)");
                             double vaha1 = sc.nextDouble();
+                            sc.nextLine();
                             list.add(new Mazlicek(jmeno1,druh1,vek1,vaha1));
                         }
                         break;
                     case 2:
-                        list.toString();
+                        for (int i = 0; i < list.size(); i++) {
+                            System.out.println("Mazlicek " + (i+1) + ": " + list.get(i));
+                        }
                         break;
                     case 3:
                         System.out.println("Konec programu.");
